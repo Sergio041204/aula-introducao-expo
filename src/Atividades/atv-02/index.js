@@ -2,29 +2,40 @@ import { View, Text, Image } from 'react-native';
 
 import styles from './styles';
 
-import img from '../../../assets/002-1-react-native.png'; 
+import azul from '../../..assets/brasilAzul.jpg';
+import branco from '../../..assets/brasilBranco.jpg';
+import preta from  '../../..assets/brasilPreta.jpg';
 
-import Mensagem from './mensagens';
+import Card from './card';
 
-function Exemplo02 () {
+function Atividade02 () {
 
     
     return(
         <View style={styles.container}>
-            <Text style={styles.titulo}>Exemplo 2</Text>
-            <Image source={img} style={styles.imagem} /> 
+            <Text style={styles.titulo}>Atividade 2</Text>
 
-            <Mensagem titulo={'Sucesso'}>
-                Valor enviado corretamente!
-            </Mensagem>
-            <Mensagem titulo={'Erro'}>
-                O programa não respondeu como esperado!
-            </Mensagem>
-            <Mensagem titulo={'Alerta'}>
-                Você não pode fazer isso!
-            </Mensagem>
+            <Card 
+                titulo={'Camisa Azul'} 
+                texto={'Camisa numero dois.'}
+                valor={'R$ 499,00'}
+                img={azul}
+            />
+            <Card 
+                titulo={'Camisa Preta'} 
+                texto={'Camisa homenagem.'}
+                valor={'R$ 399,00'}
+                img={preta}
+            />
+             <Card
+                titulo={'Camisa Branca'}
+                texto={'Camisa Vintage.'}
+                valor={'R$ 300,00'}   
+                img={branco}
+            />
+            
         </View>
     );
 }
 
-export default Exemplo02;
+export default Atividade02;

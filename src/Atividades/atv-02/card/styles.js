@@ -14,13 +14,19 @@ const styles = StyleSheet.create({
     }, 
     titulo: {
         fontSize: RFPercentage(3.5), 
-        fontWeight: 'bold', 
+        fontWeight: 'bolder', 
         color: 'darkslategrey', 
     }, 
-    mensagem: {
+    descricao: {
         fontSize: RFPercentage(2), 
         color: '#222',
+        fontWeight: 'bolder', 
     }, 
+        preco: {
+        fontSize: RFPercentage(3.5), 
+        color: '#222',
+        fontWeight: 'bolder', 
+    }
 });
 
 export default styles;

@@ -4,9 +4,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import Atividade01 from './src/Atividades/atv-01';
 import Atividade02 from './src/Atividades/atv-02';
 
-import Atividade01 from './src/Atividades/atv-01';
+import Exemplo01 from './src/exemplos/ex-01';
+import Exemplo02 from './src/exemplos/ex-02';
 
-export default function App() {
+
+export default function App(){
   return (
     <View style={styles.container}>
       <Atividade02 />
