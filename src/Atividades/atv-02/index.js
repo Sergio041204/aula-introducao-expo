@@ -2,9 +2,9 @@ import { View, Text, Image } from 'react-native';
 
 import styles from './styles';
 
-import azul from '../../..assets/brasilAzul.jpg';
-import branco from '../../..assets/brasilBranco.jpg';
-import preta from  '../../..assets/brasilPreta.jpg';
+import azul from '../../../assets/brasilAzul.jpg';
+import branco from '../../../assets/brasilBranco.png';
+import preta from  '../../../assets/brasilPreta.jpg';
 
 import Card from './card';
 

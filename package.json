@@ -17,5 +17,19 @@
     "react-native-responsive-fontsize": "^0.5.1",
     "react-native-web": "^0.21.0"
   },
-  "private": true
+  "private": true,
+  "description": "aula react native com expo",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sergio041204/aula-introducao-expo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sergio041204/aula-introducao-expo/issues"
+  },
+  "homepage": "https://github.com/Sergio041204/aula-introducao-expo#readme"
 }
