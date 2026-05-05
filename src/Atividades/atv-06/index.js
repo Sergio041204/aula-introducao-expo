@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 
 import Input from './input';
 import Botao from './botao';
@@ -8,29 +8,66 @@ import styles from './styles';
 
 export default function Atividade06() {
 
-    const [peso, setPeso] = useState(null);
-    const [altura, setAltura] = useState(null);
-    const [imc, setImc] = useState(0.00);
-    const mensErro = 'Valores inseridos de forma incorreta!';
+    const [peso, setPeso] = useState('');
+    const [altura, setAltura] = useState('');
+    const [imc, setImc] = useState(null);
+    
 
-    function calculaImc() {
-        const tmpImc = peso / (altura * altura);
-        setImc(tmpImc);
+    const calcularImc = () =>  {
+        const resultado = peso / (altura * altura);
+        setImc (resultado, toFixed (2)); 
     }
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.titulo}>atividade06</Text>
-            <View style={styles.ladoalado}>
-                <Input placeholder='Peso' valor={peso} atualizaValor={setPeso} />
-                <Input placeholder='Altura' valor={altura} atualizaValor={setAltura} />
-            </View>
+        <View style = {styles.container}>
+          <Text Style={styles.titulo}
+    >Calculadora IMC</Text>
 
-            <Text style={styles.imc}>{isNaN(imc) ? mensErro : imc.toFixed(2)}</Text>
+    <TextInput
+       placeholder = "Peso (kg)"
+       keyboardType = "numeric"
+       style = {styles.input}
+       value = {peso}
+       onChangeText = {setPeso}/>
 
-            <Text style={[styles.imc, styles.txtMensagem]}>Mensagem</Text>
+    <TextInput
+        placeholder = "Altura (m)"
+        keyboardType = "numeric"
+        style = {styles.input}
+        value = {altura}
+        onChangeText = {setAltura}/>   
 
-            <Botao calcular={calculaImc}>Calcular</Botao>
+    <Button title = "Calcular IMC"
+        onPress = {calcular IMC} />
+
+        {imc && <Text
+        style = {styles.resultado} >IMC: {imc}</
+        Text>}
         </View>
-    )
+
+    );
 }
+
+const styles = StyleSheet.creat({
+    container: {
+        flex: 1,
+        justifyContent:  'center',
+        padding: 20,
+    },
+    titulo: {
+        fontSize: 24,
+        textAlign: 'center',
+        marginBottom: 20,
+    },
+    input: {
+        borderWidth: 1,
+        padding: 10,
+        marginBotton: 10,
+        borderRadius: 5,
+    },
+    resultado: {
+        marginTop: 20,
+        FontSize: 20,
+        textAlign: 'center',
+    },
+});

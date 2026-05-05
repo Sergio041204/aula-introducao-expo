@@ -1,9 +1,14 @@
 import { useState } from 'react';
-import { View, Text, Button, Alert, TouchableOpacity } from 'react-native';
+import { View, Text } from 'react-native';
 
-import styles from './styles';
+import input from './input';
+import Botao from './botao';
 
-function Exemplo03() {
+import styles from './styles'
+
+export default function Exemplo06() {
+
+
 
     const [numero, setNumero] = useState(0);
 
