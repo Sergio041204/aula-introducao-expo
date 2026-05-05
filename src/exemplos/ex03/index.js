@@ -1,14 +1,9 @@
 import { useState } from 'react';
 import { View, Text } from 'react-native';
 
-import input from './input';
-import Botao from './botao';
-
 import styles from './styles'
 
-export default function Exemplo06() {
-
-
+export default function Exemplo03() {
 
     const [numero, setNumero] = useState(0);
 
@@ -66,4 +61,3 @@ export default function Exemplo06() {
     );
 }
 
-export default Exemplo03;
